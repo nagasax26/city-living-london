@@ -1,0 +1,270 @@
+/*adding a gutter for best layout
+gutter: 9rem;
+
+*/
+
+:root{
+    --gutter: 5rem;
+}
+
+[class^='col-']:not(:last-child){
+    /*this is where the gutter defined*/
+    margin-right: var(--gutter);
+}
+
+.col-1 {
+    float: left;
+    width:8.33333333%;
+}
+
+.col-2 {
+    float: left;
+    width: 16.66666666%;
+}
+
+.col-3 {
+    float: left;
+/*    width: 25%;*/
+    width: calc((100% - 3 * var(--gutter)) / 4);
+}
+
+.col-4 {
+    float: left;
+/*    width: 33.33333333%;*/
+    width: calc((100% - 2 * var(--gutter)) / 3);
+}
+
+.col-5 {
+    float: left;
+    width: 41.66666666%;
+}
+
+.col-6 {
+    float: left;
+    width: 50%;
+}
+
+.col-7 {
+    float: left;
+    width: 58.33333333%;
+}
+
+.col-8 {
+    float: left;
+    width: 66.66666666%;
+}
+
+.col-9 {
+    float: left;
+    width: 75%;
+}
+
+.col-10 {
+    float: left;
+    width: 83.33333333%;
+}
+
+
+.col-11 {
+    float: left;
+    width: 91.66666666%;
+}
+
+.col-12 {
+    float: left;
+    width: 100%;
+}
+
+
+
+.row:before {
+    display: table;
+    content: "";
+}
+
+.row:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+
+/*utilites*/
+
+.u-text-center {
+    text-align: center;
+}
+
+.u-text-right {
+    text-align: right;
+}
+
+.u-text-left {
+    text-align: left;
+}
+
+/*navbar*/
+
+.nav {
+    position: relative;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .2);
+    z-index: 11;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline-block;
+}
+
+.nav ul li a:link,
+.nav ul li a:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #6B6B6B;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 3rem;
+
+
+}
+
+
+
+.nav ul li:hover:not(:first-child) {
+    text-decoration: underline;
+    background-color: #EDEEF0;
+}
+
+
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+}
+
+.nav--white {
+    background-color: #F9FBFD;
+}
+
+
+/*DROPMENU*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 1.7rem;
+    /*    font-weight: 700;*/
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    margin: 0 auto;
+
+    position: absolute;
+    height: 15rem;
+/*    background-color: #F9FBFD;*/
+    background-color: #f62727;
+    min-width: 20rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .2);
+
+        z-index: 10;
+}
+
+.dropdown-content a:link,
+.dropdown-content a:visited{
+    color: white;
+    font-weight: 700;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all .2s;
+}
+
+.dropdown-content a:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+}
+
+.dropdown-content a:hover {
+    background-color: #F9FBFD;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*btn*/
+
+.btn {
+    font-size: 1.8rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    padding: 2rem 1rem;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #EDEEF0;
+}
+
+.btn--orange {
+    color: #FF7322 !important;
+    border: 3px solid #FF7322;
+
+}
+
+.btn--orange:hover {
+    background-color: #FAEDE6;
+}
+
+
+/*Logo*/
+
+.logo {
+    position: absolute;
+    top: 2.5rem;
+    left: 1rem;
+    width: 15rem;
+    display: inline-block;
+    /*
+	background-image: url(img/cityliving.svg);
+    
+    background-size: cover;
+*/
+}
+
+.logo img {
+    width: 100%;
+}
+
+.logo:hover .logo__caption {
+    visibility: visible;
+}
+
+
+.logo__caption {
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    left: 10rem;
+    top: -1.2rem;
+    font-size: 1.4rem;
+    border: 1px solid #000;
+    visibility: hidden;
+}
+
+
